@@ -13,16 +13,18 @@ body .logo{
     text-align: left;
 }
 body .buscar{
-     display: inline-block;
+     display: inline-flex;
+     flex-direction: row;
 }
 body .buscador{
-    display: inline-block;
+    display: inline-flex;
     width: 26px;
     height: 22px;
     color:  #666;
     background-color: #ebebeb ;
     border-radius: 5px;
     border: solid 1px;
+    flex-direction: row;
 }
 body .compra{
     font-family: 'Roboto', sans-serif;
@@ -38,6 +40,15 @@ body .compra{
 header{
     text-align: center;
 }
+header nav ul li{
+display:none;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
 .home .burguer{
     display: inline-block;
     width: 28px;
@@ -50,15 +61,7 @@ header{
     font-size: 20px;
     margin-bottom: 15px;
     margin-top: 15px;
-}
-li{
-    list-style: none;
-}
-a{
-    text-decoration: none;
-}
-header nav ul li{
-display: none;
+    text-align: center;
 }
 /*main*/
 main .vista{
@@ -76,25 +79,80 @@ main article{
     border:solid 1px #ebebeb;
 }
 main article img{
-    width: 95%;
+    width: 80%;
     margin-left: 5px;
-    margin-right: 5px;
+    margin-right:5px;
+    text-align: center;
 }
 main article .titular{
     display: none;
 }
-main article .precio{
+main .container0{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 95%;
+    border:solid 1px #ebebeb;
+    text-align: left;
+    margin: 0;
+    box-shadow: ​0px ​​0px ​​10px ​​rgb​(​100​, ​100​, ​100​);
+    flex-direction: column;
+}
+main .caja1{
+     width: 100%;
+     margin:4px;
+     border-top: solid 1px #ebebeb;
+     box-shadow: ​0px ​​0px ​​10px ​​rgb​(​100​, ​100​, ​100​);
+     text-align: left;
+     padding: 15px 15px  15px;
+   
+     
+}
+main .caja2{
+     width: 100%;
+     margin: 4px;
+     border-top: solid 1px #ebebeb;
+     background-color: white;
+     box-shadow: ​0px ​​0px ​​10px ​​rgb​(​100​, ​100​, ​100​);
+      
+}
+main .caja3{
+     width: 100%;
+     margin: 4px;
+     border-top: solid 1px #ebebeb;
+     background-color: white;
+     box-shadow: ​0px ​​0px ​​10px ​​rgb​(​100​, ​100​, ​100​);
+}
+main .caja4{
+     width: 100%;
+     margin: 4px;
+     border-top: solid 1px #ebebeb;
+     background-color: white;
+     box-shadow: ​0px ​​0px ​​10px ​​rgb​(​100​, ​100​, ​100​);
+}
+
+main article i{
+    color:#39b54a;
+    margin: 10px;
+    background-color:white;
+    width: 1.8em;
+    text-align: center;
+    line-height: 1.8em;
+    border:1px solid #39b54a ;
+    border-radius: 50%;
+}
+main article h5{
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     margin: 10px;
-    background-color: white;
 }
-main article .ofertas{
+main article p{
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     color:#39b54a;
     margin: 10px;
-    background-color: white;
+}
+main article h4{
+    display: none;
 }
 main article{
     padding: 15px 15px 15px;
@@ -102,16 +160,6 @@ main article{
     border: solid 1px #ebebeb;
     background-color: white;
    flex-wrap: wrap;
-}
-main article .camion{
-    color:#39b54a;
-    margin: 15px;
-    background-color:white;
-    width: 1.7em;
-    text-align: center;
-    line-height: 1.6em;
-    border:1px solid #39b54a ;
-    border-radius: 50%;
 }
 /*footer*/
 footer{
@@ -138,18 +186,27 @@ footer .iconos{
     color: rgb(28, 2, 180);
 }
 @media(min-width:768px){
-    body{
-         box-shadow​: ​0px​​0px​​10px​​rgb​(​100​, ​100​, ​100​);;
-    }
-   
     body .logo{
         padding: 10px;
         width: 50%;
     }
+    
+    }
     header nav ul li {
-        display:contents;
-        margin :15px;
+        display:flex;
         color: black;
+        flex-direction: column;
+        text-align: left;
+        flex-direction: row;
+        padding-left: 10px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+    }
+    header .ico{
+        display:flex;
+        color:rgb(31, 17, 226);
+        order: 1;
+
     }
     .home  .burguer{
         display: none;
@@ -158,14 +215,29 @@ footer .iconos{
         width: 100%;
         height: 100%;
     }
+    /*main*/
     main article .titular{
         display: contents;
         font-family: 'Roboto', sans-serif;
         background-size: 16px;
         margin: 15px;
     }
-    
+    main article h4{
+        display:inline-block;
+        font-family: 'Roboto', sans-serif;
+        background-size: 14px;
+        margin: 10px;
+    }
 }
 @media (min-width:1024px){
-    
+    /*footer*/
+    footer section p{
+        color: lightsalmon;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        font-size: 12px;
+        margin: 15px;
+        background-color: lightsteelblue;
+    }
+
 }
